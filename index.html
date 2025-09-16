@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Vista Grande</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="menu"></div>
+
+  <main>
+    <section class="hero">
+      <img src="img/logo.png" alt="Vista Grande" class="hero-logo">
+      <h1>Bienvenido a Vista Grande</h1>
+      <p>Página principal con anuncios destacados de la urbanización Vista Grande.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lote 39 / Vista Grande / Andres Cuadrado / 0998879869</p>
+  </footer>
+
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+</body>
+</html>
+

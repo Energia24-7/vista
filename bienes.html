@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienes Raíces - Vista Grande</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="menu"></div>
+
+  <main>
+    <h1>Bienes Raíces</h1>
+    <div>
+      <label for="filterTransaccion">Transacción:</label>
+      <select id="filterTransaccion"><option value="">Todas</option></select>
+
+      <label for="filterTipo">Tipo de inmueble:</label>
+      <select id="filterTipo"><option value="">Todos</option></select>
+    </div>
+    <div id="bienes"></div>
+  </main>
+
+  <footer>
+    <p>Lote 39 / Vista Grande / Andres Cuadrado / 0998879869</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+</body>
+</html>
